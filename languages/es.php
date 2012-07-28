@@ -59,7 +59,6 @@ $spanish = array(
 			'tidypics:settings:grp_perm_override' => "Permitir acceso completo a los miembros de este grupo al album de fotos",
 			'tidypics:settings:maxfilesize' => "Tama&ntilde;o m&aacute;ximo de la imagen en megabytes (MB):",
 			'tidypics:settings:quota' => "Usuario/Grupo Cuota (MB) - 0 MB de cuota",
-			'tidypics:settings:watermark' => "Introduce el texto que aparecer&aacute; en la marca de agua - ImageMagick Cmdline debe ser seleccionado para la libreria de imagenes",
 			'tidypics:settings:im_path' => "Ingresa la ruta de tu ImageMagick commands (incluye el slash)",
 			'tidypics:settings:img_river_view' => "¿Cu&aacute;ntas entradas deseas para cada grupo de im&aacute;genes cargadas?",
 			'tidypics:settings:album_river_view' => "Muestra la portada del &aacute;lbum o el set de fotos para el &aacute;lbum nuevo",

@@ -63,7 +63,6 @@ $danish = array(
 			'tidypics:settings:grp_perm_override' => "Giv gruppens medlemmer fuld adgang til gruppe-album",
 			'tidypics:settings:maxfilesize' => "Maksimal billedstørrelse i megabytes (MB):",
 			'tidypics:settings:quota' => "Tildelt plads til brugere / grupper (MB) (0 = Ingen plads)",
-			'tidypics:settings:watermark' => "Indtast teksten for vandmærke - ImageMagick cmdline skal vælges for billedbiblioteket",
 			'tidypics:settings:im_path' => "Angiv stien til ImageMagick kommandoer (som slutter med et Slash/)",
 			'tidypics:settings:img_river_view' => "Hvor mange poster i aktivitetslisten for hvert parti af uploadede billeder",
 			'tidypics:settings:album_river_view' => "Vis albumcover eller et sæt af fotos til nye album",

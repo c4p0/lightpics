@@ -54,7 +54,6 @@ $hebrew = array(
 	 'tidypics:settings:grp_perm_override'  =>  "אפשר לחברי קבוצה גישה מלאה לאלבומים קבוצתיים" , 
 	 'tidypics:settings:maxfilesize'  =>  "גודל תמונה מירבי בMB" , 
 	 'tidypics:settings:quota'  =>  "מכסה בMB למשתמש/קבוצה - 0 שווה ללא מכסה" , 
-	 'tidypics:settings:watermark'  =>  "הזן טקסט אשר יופיע בסימן המים - יש לבחור ב ImageMagick Cmdline עבור ספריית התמונות" , 
 	 'tidypics:settings:im_path'  =>  "הזן את הנטיב לפקודות ImageMagick ללא לוכסן בסוף" , 
 	 'tidypics:settings:img_river_view'  =>  "כמה רשומות במה חדש עבור כל מקבץ תמונות אשר נוסף" , 
 	 'tidypics:settings:album_river_view'  =>  "הצג תמונה אחת או מקבץ תמונות עבור אלבום חדש" , 

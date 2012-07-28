@@ -72,7 +72,6 @@ $german = array(
 			'tidypics:settings:grp_perm_override' => "Gruppen-Mitgliedern unbeschränkten Zugriff auf die Verwaltung von Gruppen-Alben geben",
 			'tidypics:settings:maxfilesize' => "Maximal erlaubte Bildgröße in Megabytes (MB):",
 			'tidypics:settings:quota' => "Quota für Benutzer in Megabytes (MB) (0 = kein Quota)",
-			'tidypics:settings:watermark' => "Gib den Text ein, der als Wasserzeichen eingefügt wird",
 			'tidypics:settings:im_path' => "Der Pfad zu den ImageMagick-Kommandozeilentools auf dem Server",
 			'tidypics:settings:img_river_view' => "Anzahl der Einträge im River beim gleichzeitigen Hochladen mehrerer Bilder",
 			'tidypics:settings:album_river_view' => "Anzeige des Albumcovers oder eines Sets von Bildern für neue Alben",

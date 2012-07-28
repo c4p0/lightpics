@@ -5,8 +5,6 @@
  * @package TidypicsImageResize
  */
 
-include dirname(__FILE__) . "/watermark.php";
-
 
 /**
  * Create thumbnails using PHP GD Library
@@ -37,7 +35,6 @@ function tp_create_gd_thumbnails($file, $prefix, $filestorename) {
 	$thumbname = $thumb->getFilenameOnFilestore();
 	$rtn_code = tp_gd_resize(	$file->getFilenameOnFilestore(),
 								$thumbname,
-								FALSE,
 								$image_sizes['tiny_image_width'],
 								$image_sizes['tiny_image_height'],
 								TRUE);
@@ -53,7 +50,6 @@ function tp_create_gd_thumbnails($file, $prefix, $filestorename) {
 	$thumbname = $thumb->getFilenameOnFilestore();
 	$rtn_code = tp_gd_resize(	$file->getFilenameOnFilestore(),
 								$thumbname,
-								FALSE,
 								$image_sizes['small_image_width'],
 								$image_sizes['small_image_height'],
 								TRUE);
@@ -68,7 +64,6 @@ function tp_create_gd_thumbnails($file, $prefix, $filestorename) {
 	$thumbname = $thumb->getFilenameOnFilestore();
 	$rtn_code = tp_gd_resize(	$file->getFilenameOnFilestore(),
 								$thumbname,
-								TRUE,
 								$image_sizes['large_image_width'],
 								$image_sizes['large_image_height'],
 								FALSE);
@@ -89,13 +84,12 @@ function tp_create_gd_thumbnails($file, $prefix, $filestorename) {
  *
  * @param string $input_name The name of the file on the disk
  * @param string $output_name The name of the file to be written
- * @param bool - watermark this image?
  * @param int $maxwidth The maximum width of the resized image
  * @param int $maxheight The maximum height of the resized image
  * @param TRUE|FALSE $square If set to TRUE, will take the smallest of maxwidth and maxheight and use it to set the dimensions on all size; the image will be cropped.
  * @return bool TRUE on success or FALSE on failure
  */
-function tp_gd_resize($input_name, $output_name, $watermark, $maxwidth, $maxheight, $square = FALSE, $x1 = 0, $y1 = 0, $x2 = 0, $y2 = 0) {
+function tp_gd_resize($input_name, $output_name, $maxwidth, $maxheight, $square = FALSE, $x1 = 0, $y1 = 0, $x2 = 0, $y2 = 0) {
 
 	// Get the size information from the image
 	$imgsizearray = getimagesize($input_name);
@@ -157,10 +151,6 @@ function tp_gd_resize($input_name, $output_name, $watermark, $maxwidth, $maxheig
 									$region_height);
 	if (!$rtn_code) {
 		return $rtn_code;
-	}
-
-	if ($watermark) {
-		tp_gd_watermark($newimage);
 	}
 
 	switch ($imgsizearray['mime']) {
@@ -242,8 +232,6 @@ function tp_create_imagick_thumbnails($file, $prefix, $filestorename) {
 		return FALSE;
 	}
 	$file->largethumb = $prefix."largethumb".$filestorename;
-
-	tp_imagick_watermark($thumbname);
 
 	unset($thumb);
 
@@ -369,9 +357,6 @@ function tp_create_im_cmdline_thumbnails($file, $prefix, $filestorename) {
 		return FALSE;
 	}
 	$file->largethumb = $prefix."largethumb".$filestorename;
-
-
-	tp_im_cmdline_watermark($thumbname);
 
 	unset($thumb);
 
