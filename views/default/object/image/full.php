@@ -51,10 +51,7 @@ echo $summary;
 
 echo '<div class="tidypics-photo-wrapper center">';
 echo elgg_view('object/image/navigation', $vars);
-echo elgg_view('photos/tagging/help', $vars);
-echo elgg_view('photos/tagging/select', $vars);
 echo $img;
-echo elgg_view('photos/tagging/tags', $vars);
 echo '</div>';
 
 if ($photo->description) {

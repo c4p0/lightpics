@@ -38,9 +38,6 @@ function tidypics_init() {
 	$js = elgg_get_simplecache_url('js', 'photos/tidypics');
 	elgg_register_simplecache_view('js/photos/tidypics');
 	elgg_register_js('tidypics', $js, 'footer');
-	$js = elgg_get_simplecache_url('js', 'photos/tagging');
-	elgg_register_simplecache_view('js/photos/tagging');
-	elgg_register_js('tidypics:tagging', $js, 'footer');
 	$js = elgg_get_simplecache_url('js', 'photos/uploading');
 	elgg_register_simplecache_view('js/photos/uploading');
 	elgg_register_js('tidypics:uploading', $js, 'footer');
@@ -48,7 +45,7 @@ function tidypics_init() {
 	elgg_register_js('tidypics:slideshow', 'mod/tidypics/vendors/PicLensLite/piclens_optimized.js', 'footer');
 	elgg_register_js('swfobject', 'mod/tidypics/vendors/uploadify/swfobject.js', 'footer');
 	elgg_register_js('jquery.uploadify-tp', 'mod/tidypics/vendors/uploadify/jquery.uploadify.v2.1.1.min.js', 'footer');
-
+	
 	// Add photos link to owner block/hover menus
 	elgg_register_plugin_hook_handler('register', 'menu:owner_block', 'tidypics_owner_block_menu');
 
@@ -99,8 +96,6 @@ function tidypics_init() {
 	elgg_register_action("photos/image/save", "$base_dir/image/save.php");
 	elgg_register_action("photos/image/ajax_upload", "$base_dir/image/ajax_upload.php", 'logged_in');
 	elgg_register_action("photos/image/ajax_upload_complete", "$base_dir/image/ajax_upload_complete.php", 'logged_in');
-	elgg_register_action("photos/image/tag", "$base_dir/image/tag.php");
-	elgg_register_action("photos/image/untag", "$base_dir/image/untag.php");
 
 	elgg_register_action("photos/batch/edit", "$base_dir/batch/edit.php");
 
@@ -216,13 +211,6 @@ function tidypics_page_handler($page) {
 			include "$base/image/download.php";
 			break;
 
-		case "tagged": // all photos tagged with user
-			if (isset($page[1])) {
-				set_input('guid', $page[1]);
-			}
-			include($CONFIG->pluginspath . "tidypics/pages/tagged.php");
-			break;
-
 		case "mostviewed": // images with the most views
 			if (isset($page[1])) {
 				set_input('username', $page[1]);
@@ -326,18 +314,6 @@ function tidypics_entity_menu_setup($hook, $type, $return, $params) {
 				'text' => "<span>$text</span>",
 				'href' => false,
 				'priority' => 90,
-			);
-			$return[] = ElggMenuItem::factory($options);
-		}
-
-		if (elgg_get_plugin_setting('tagging', 'tidypics')) {
-			$options = array(
-				'name' => 'tagging',
-				'text' => elgg_echo('tidypics:actiontag'),
-				'href' => '#',
-				'title' => elgg_echo('tidypics:tagthisphoto'),
-				'rel' => 'photo-tagging',
-				'priority' => 80,
 			);
 			$return[] = ElggMenuItem::factory($options);
 		}

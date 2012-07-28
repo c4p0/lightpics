@@ -56,7 +56,6 @@ $danish = array(
 			'tidypics:admin:instructions' => 'Dette er de centrale Tidypics indstillinger. Tilpas dem til din opsætning og klik derefter på Gem.',
 			'tidypics:settings:image_lib' => "Foto arkiv: ",
 			'tidypics:settings:download_link' => "Vis download-link",
-			'tidypics:settings:tagging' => "Tillad fotolinks",
 			'tidypics:settings:photo_ratings' => "Tillad karakterergivning af foto (kræver plugin af Miguel Montes eller andet kompatibelt plugin)",
 			'tidypics:settings:exif' => "Vis EXIF data",
 			'tidypics:settings:view_count' => "Vis tæller",
@@ -105,22 +104,6 @@ $danish = array(
 			'image:back' => "Forrige",
 			'image:next' => "Næste",
 
-		// tagging
-			'tidypics:taginstruct' => 'Vælg et område på billedet, som du ønsker at linke',
-			'tidypics:deltag_title' => 'Vælg at slette links',
-			'tidypics:finish_tagging' => 'Annuller',
-			'tidypics:tagthisphoto' => 'Tilføj link til foto',
-			'tidypics:deletetag' => 'Slet foto link',
-			'tidypics:actiontag' => 'Link',
-			'tidypics:actiondelete' => 'Slet',
-			'tidypics:actioncancel' => 'Annuller',
-			'tidypics:inthisphoto' => 'Links i billedet',
-			'tidypics:usertag' => "Foto links til medlem %s",
-			'tidypics:phototagging:success' => 'Foto link tilføjet',
-			'tidypics:phototagging:error' => 'Uventet fejl ved linket',
-			'tidypics:deletetag:success' => 'Udvalgte links er blevet fjernet',
-
-
 		//rss
 			'tidypics:posted' => 'Billedet indstilles individuelt:',
 
@@ -138,8 +121,6 @@ $danish = array(
 			'image:river:created:multiple' => "%s added %u photos to album %s",
 			'image:river:item' => "et billede",
 			'image:river:annotate' => "en kommentar til billedet",
-			'image:river:tagged' => "%s tagged %s in the photo %s",
-			'image:river:tagged:unknown' => "%s tagged %s in a photo",
 			'album:river:created' => "%s har tilføjet et nyt album",
 			'album:river:group' => "i gruppen",
 			'album:river:item' => "et album",

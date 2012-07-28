@@ -64,7 +64,6 @@ $german = array(
 			'tidypics:settings:thumbnail' => "Erzeugung von Vorschaubildern",
 			'tidypics:settings:help' => "Hilfe",
 			'tidypics:settings:download_link' => "Zeige Download-Link",
-			'tidypics:settings:tagging' => "Tagging von Bildern erlauben",
 			'tidypics:settings:photo_ratings' => "Bewerten von Bildern erlauben (benötigt das Elggx Fivestar-Plugin oder ein vergleichbares)",
 			'tidypics:settings:exif' => "EXIF-Daten anzeigen",
 			'tidypics:settings:view_count' => "Zugriffszähler anzeigen",
@@ -102,7 +101,7 @@ $german = array(
 			'tidypics:server_info:max_input_time_desc' => 'Maximale erlaubte Dauer, in der das Hochladen von Daten auf den Server abgeschlossen sein muss.',
 			'tidypics:server_info:max_execution_time_desc' => 'Maximal erlaubte Ausführdauer für ein Skript auf dem Server.',
 			'tidypics:server_info:use_only_cookies_desc' => 'Cookie only sessions können den Flash-Uploader beeinträchtigen.',
-
+			
 			'tidypics:server_info:php_version' => 'PHP-Version',
 			'tidypics:server_info:memory_limit' => 'Für PHP verfügbarer Speicher',
 			'tidypics:server_info:peak_usage' => 'Genutzer Speicher, um diese Seite zu laden',
@@ -169,29 +168,6 @@ $german = array(
 			'image:next' => "Nächstes",
 			'image:index' => "%u von %u",
 
-		// tagging
-			'tidypics:taginstruct' => 'Wähle den Bereich auf dem Bild, für das Du ein Tag setzen willst, oder %s.',
-			'tidypics:finish_tagging' => 'Taggen beenden',
-			'tidypics:deltag_title' => 'Wähle die Tags, die gelöscht werden sollen',
-			'tidypics:finish_tagging' => 'Tagging abbrechen',
-			'tidypics:tagthisphoto' => 'Bild taggen',
-			'tidypics:actiontag' => 'Tag setzen',
-			'tidypics:actioncancel' => 'Abbrechen',
-			'tidypics:inthisphoto' => 'Tags in diesem Bild',
-			'tidypics:usertag' => "Bilder mit Tags, die sich auf %s beziehen",
-			'tidypics:phototagging:success' => 'Das Bild wurde getaggt.',
-			'tidypics:phototagging:error' => 'Beim Hinzufügen des Tags ist ein Fehler aufgetreten.',
-
-			'tidypics:phototagging:delete:success' => 'Das Tag wurde entfernt.',
-			'tidypics:phototagging:delete:error' => 'Beim Entfernen des Tags ist ein Fehler aufgetreten.',
-			'tidypics:phototagging:delete:confirm' => 'Dieses Tag entfernen?',
-
-			'tidypics:tag:subject' => "Du wurdest in einem Bild getaggt",
-			'tidypics:tag:body' => "Du wurdest im Bild %s von %s getaggt.
-
-Um das Bild zu sehen, folge diesem Link: %s",
-
-
 		//rss
 			'tidypics:posted' => 'hat ein Bild hinzugefügt:',
 
@@ -210,8 +186,6 @@ Um das Bild zu sehen, folge diesem Link: %s",
 			'image:river:created:multiple' => "%s hat %u Bilder zum Album %s hinzugefügt.",
 			'image:river:item' => "ein Bild",
 			'image:river:annotate' => "einen Kommentar zum Bild",
-			'image:river:tagged' => "%s hat %s im Bild %s getaggt.",
-			'image:river:tagged:unknown' => "%s hat %s in einem Bild getaggt.",
 			'river:create:object:album' => "%s hat das neue Bilderalbum %s hinzugefügt.",
 			'album:river:group' => "in der Gruppe",
 			'album:river:item' => "ein Album",
