@@ -175,26 +175,6 @@ if (get_context() == "search") {
 			<div class="clearfloat"></div>
 		</div>
 				<?php
-				// image menu (start tagging, download, etc.)
-
-				echo '<div id="tidypics_controls"><ul>';
-				echo elgg_view('tidypics/image_menu', array(
-					'image_guid' => $image_guid,
-					'viewer' => $viewer,
-					'owner' => $owner,
-					'anytags' => $image->isPhotoTagged(),
-					'album' => $album, ) );
-				echo '</ul></div>';
-
-				// tagging code - photo tags on images, photo tag listing and hidden divs used in tagging
-				if (get_plugin_setting('tagging', 'tidypics') != "disabled") {
-					echo elgg_view('tidypics/tagging', array(
-						'image' => $image,
-						'viewer' => $viewer,
-						'owner' => $owner, ) );
-				}
-
-
 				if (get_plugin_setting('exif', 'tidypics') == "enabled") {
 					echo elgg_view('tidypics/exif', array('guid'=> $image_guid));
 				}

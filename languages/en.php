@@ -64,7 +64,6 @@ $english = array(
 			'tidypics:settings:thumbnail' => "Thumbnail Creation",
 			'tidypics:settings:help' => "Help",
 			'tidypics:settings:download_link' => "Show download link",
-			'tidypics:settings:tagging' => "Enable photo tagging",
 			'tidypics:settings:photo_ratings' => "Enable photo ratings (requires rate plugin of Miguel Montes or compatible)",
 			'tidypics:settings:exif' => "Display EXIF data",
 			'tidypics:settings:view_count' => "Display view count",
@@ -175,29 +174,6 @@ $english = array(
 			'image:next' => "Next",
 			'image:index' => "%u of %u",
 
-		// tagging
-			'tidypics:taginstruct' => 'Select the area that you want to tag or %s',
-			'tidypics:finish_tagging' => 'Stop tagging',
-			'tidypics:tagthisphoto' => 'Tag this photo',
-			'tidypics:actiontag' => 'Tag',
-			'tidypics:actioncancel' => 'Cancel',
-			'tidypics:inthisphoto' => 'In this photo',
-			'tidypics:usertag' => "Photos tagged with user %s",
-			'tidypics:phototagging:success' => 'Photo tag was successfully added',
-			'tidypics:phototagging:error' => 'Unexpected error occurred during tagging',
-
-			'tidypics:phototagging:delete:success' => 'Photo tag was removed.',
-			'tidypics:phototagging:delete:error' => 'Unexpceted error occurred when removing photo tag.',
-			'tidypics:phototagging:delete:confirm' => 'Remove this tag?',
-
-
-
-			'tidypics:tag:subject' => "You have been tagged in a photo",
-			'tidypics:tag:body' => "You have been tagged in the photo %s by %s.			
-			
-The photo can be viewed here: %s",
-
-
 		//rss
 			'tidypics:posted' => 'posted a photo:',
 
@@ -216,8 +192,6 @@ The photo can be viewed here: %s",
 			'image:river:created:multiple' => "%s added %u photos to the album %s",
 			'image:river:item' => "a photo",
 			'image:river:annotate' => "a comment on the photo",
-			'image:river:tagged' => "%s tagged %s in the photo %s",
-			'image:river:tagged:unknown' => "%s tagged %s in a photo",
 			'river:create:object:album' => "%s created a new photo album %s",
 			'album:river:group' => "in the group",
 			'album:river:item' => "an album",

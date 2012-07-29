@@ -51,7 +51,6 @@ $spanish = array(
 			'tidypics:admin:instructions' => 'Este es el coraz&oacute;n de las preferencias de Tidypics. Cambialas y luego guardalas.',
 			'tidypics:settings:image_lib' => "Libreria de Imagenes: ",
 			'tidypics:settings:download_link' => "Mostrar vinculo de descarga",
-			'tidypics:settings:tagging' => "Habilitar etiquetas en las fotos",
 			'tidypics:settings:photo_ratings' => "Habilitar ratings de fotos(requiere instalar el e plugin de Miguel Montes o compatible)",
 			'tidypics:settings:exif' => "Mostrar data de EXIF",
 			'tidypics:settings:view_count' => "Ver contador",
@@ -92,22 +91,6 @@ $spanish = array(
 			'image:back' => "Anterior",
 			'image:next' => "Siguiente",
 
-		// tagging
-			'tidypics:taginstruct' => 'Seleccciona el  &aacute;rea que deseas etiquetar',
-			'tidypics:deltag_title' => 'Seleccionas las etiquetas a borrar',
-			'tidypics:finish_tagging' => 'Detener etiquetado',
-			'tidypics:tagthisphoto' => 'Etiquetar esta foto',
-			'tidypics:deletetag' => 'Borrar etiqueta de la foto',
-			'tidypics:actiontag' => 'Etiqueta',
-			'tidypics:actiondelete' => 'Borrar',
-			'tidypics:actioncancel' => 'Cancelar',
-			'tidypics:inthisphoto' => 'En esta foto',
-			'tidypics:usertag' => "Fotos etiquetadas con %s",
-			'tidypics:phototagging:success' => 'La etiqueta de la foto fue a&ntilde;adida exitosamente',
-			'tidypics:phototagging:error' => 'Ocurri&oacute; un error inesperado durante el etiquetado',
-			'tidypics:deletetag:success' => 'Las etiquetas seleccionadas fueron borradas exitosamente',
-
-
 		//rss
 			'tidypics:posted' => 'publicar una foto:',
 
@@ -124,7 +107,6 @@ $spanish = array(
 			'image:river:created' => "%s a&ntilde;adio la foto %s al &aacute;lbum %s",
 			'image:river:item' => "una foto",
 			'image:river:annotate' => "un comentario en la foto",
-			'image:river:tagged' => "fue etiquetada en la foto",
 			'album:river:created' => "%s creo un nuevo &aacute;lbum de fotos",
 			'album:river:group' => "en el grupo",
 			'album:river:item' => "un &aacute;lbum",
