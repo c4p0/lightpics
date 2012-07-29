@@ -6,7 +6,7 @@
 
 elgg_load_library('elgg:markdown');
 
-$faq = elgg_get_plugins_path() . 'tidypics/CONFIG.txt';
+$faq = elgg_get_plugins_path() . 'lightpics/CONFIG.txt';
 $text = Markdown(file_get_contents($faq));
 
 $content = "<div class=\"elgg-markdown\">$text</div>";

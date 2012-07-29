@@ -19,7 +19,6 @@ if (get_subtype_id('object', 'image')) {
 }
 
 // set default settings
-$plugin = elgg_get_plugin_from_id('tidypics');
 
 $image_sizes = array();
 $image_sizes['large_image_width'] = $image_sizes['large_image_height'] = 600;
@@ -46,7 +45,7 @@ $defaults = array(
 );
 
 foreach ($defaults as $name => $value) {
-	if ($plugin->getSetting($name) === null) {
-		$plugin->setSetting($name, $value);
+	if (elgg_get_plugin_setting($name, 'tidypics') === null) {
+		elgg_set_plugin_setting($name, $value, 'tidypics');
 	}
 }

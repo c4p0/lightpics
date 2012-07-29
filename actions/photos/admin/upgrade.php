@@ -5,7 +5,7 @@
 
 $plugins_path = elgg_get_plugins_path();
 
-require_once "{$plugins_path}tidypics/version.php";
+require_once "{$plugins_path}lightpics/version.php";
 
 $local_version = elgg_get_plugin_setting('version', 'tidypics');
 
@@ -16,7 +16,7 @@ if ($version <= $local_version) {
 
 set_time_limit(0);
 
-$base_dir = "{$plugins_path}tidypics/upgrades";
+$base_dir = "{$plugins_path}lightpics/upgrades";
 
 // taken from engine/lib/version.php
 if ($handle = opendir($base_dir)) {

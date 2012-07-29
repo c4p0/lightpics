@@ -127,7 +127,7 @@ function tidypics_get_image_libraries() {
  */
 function tidypics_is_upgrade_available() {
 	// sets $version based on code
-	require_once elgg_get_plugins_path() . "tidypics/version.php";
+	require_once elgg_get_plugins_path() . "lightpics/version.php";
 
 	$local_version = elgg_get_plugin_setting('version', 'tidypics');
 	if ($local_version === false) {

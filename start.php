@@ -13,7 +13,7 @@ elgg_register_event_handler('init', 'system', 'tidypics_init');
  */
 function tidypics_init() {
 	// Register libraries
-	$base_dir = elgg_get_plugins_path() . 'tidypics/lib';
+	$base_dir = elgg_get_plugins_path() . 'lightpics/lib';
 	elgg_register_library('tidypics:core', "$base_dir/tidypics.php");
 	elgg_register_library('tidypics:upload', "$base_dir/upload.php");
 	elgg_register_library('tidypics:resize', "$base_dir/resize.php");
@@ -74,7 +74,7 @@ function tidypics_init() {
 	elgg_register_plugin_hook_handler('notify:entity:message', 'object', 'tidypics_notify_message');
 
 	// Register actions
-	$base_dir = elgg_get_plugins_path() . 'tidypics/actions/photos';
+	$base_dir = elgg_get_plugins_path() . 'lightpics/actions/photos';
 	elgg_register_action("photos/delete", "$base_dir/delete.php");
 
 	elgg_register_action("photos/album/save", "$base_dir/album/save.php");
@@ -107,7 +107,7 @@ function tidypics_page_handler($page) {
 
 	elgg_load_js('tidypics');
 
-	$base = elgg_get_plugins_path() . 'tidypics/pages/photos';
+	$base = elgg_get_plugins_path() . 'lightpics/pages/photos';
 	switch ($page[0]) {
 		case "all": // all site albums
 		case "world":
@@ -191,7 +191,7 @@ function tidypics_page_handler($page) {
 			if (isset($page[1])) {
 				set_input('batch', $page[1]);
 			}
-			include($CONFIG->pluginspath . "tidypics/pages/edit_multiple.php");
+			include($CONFIG->pluginspath . "lightpics/pages/edit_multiple.php");
 			break;
 
 		case "download": // download an image
@@ -204,30 +204,30 @@ function tidypics_page_handler($page) {
 			if (isset($page[1])) {
 				set_input('username', $page[1]);
 			}
-			include($CONFIG->pluginspath . "tidypics/pages/lists/mostviewedimages.php");
+			include($CONFIG->pluginspath . "lightpics/pages/lists/mostviewedimages.php");
 			break;
 
 		case "mostrecent": // images uploaded most recently
 			if (isset($page[1])) {
 				set_input('username', $page[1]);
 			}
-			include($CONFIG->pluginspath . "tidypics/pages/lists/mostrecentimages.php");
+			include($CONFIG->pluginspath . "lightpics/pages/lists/mostrecentimages.php");
 			break;
 
 		case "recentlyviewed": // images most recently viewed
-			include($CONFIG->pluginspath . "tidypics/pages/lists/recentlyviewed.php");
+			include($CONFIG->pluginspath . "lightpics/pages/lists/recentlyviewed.php");
 			break;
 
 		case "recentlycommented": // images with the most recent comments
-			include($CONFIG->pluginspath . "tidypics/pages/lists/recentlycommented.php");
+			include($CONFIG->pluginspath . "lightpics/pages/lists/recentlycommented.php");
 			break;
 
 		case "highestrated": // images with the highest average rating
-			include($CONFIG->pluginspath . "tidypics/pages/lists/highestrated.php");
+			include($CONFIG->pluginspath . "lightpics/pages/lists/highestrated.php");
 			break;
 
 		case "admin":
-			include ($CONFIG->pluginspath . "tidypics/pages/admin.php");
+			include ($CONFIG->pluginspath . "lightpics/pages/admin.php");
 			break;
 
 		default:
