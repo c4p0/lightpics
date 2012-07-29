@@ -5,7 +5,7 @@
 
 $plugin = $vars['plugin'];
 
-$checkboxes = array('tagging', 'view_count', 'uploader', 'exif', 'download_link');
+$checkboxes = array('tagging', 'view_count', 'exif', 'download_link');
 foreach ($checkboxes as $checkbox) {
 	echo '<div>';
 	echo elgg_view('input/checkbox', array(
