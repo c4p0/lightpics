@@ -57,7 +57,6 @@ $french = array(
 	 'tidypics:settings:grp_perm_override'  =>  "Autoriser l'acés total aux membres du groupe" , 
 	 'tidypics:settings:maxfilesize'  =>  "Taille maximum des images  en Mb:" , 
 	 'tidypics:settings:quota'  =>  "Quota Utilisateur/Groupe (Mb) - O égal pas de quota" , 
-	 'tidypics:settings:watermark'  =>  "Entrez le texte qui doit figure sur le WaterMark - fonction non vraiment sure." , 
 	 'tidypics:settings:im_path'  =>  "Chemin de l'exécutable ImageMagick, terminé par un slash" , 
 	 'tidypics:settings:img_river_view'  =>  "Combien d'entrées dans le river pour chaque lot de traitement des fichiers chargés" , 
 	 'tidypics:settings:album_river_view'  =>  "Montrer la couverture de l'album ou un ensemble de photos pour tout nouvel album" , 
