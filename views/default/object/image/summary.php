@@ -23,7 +23,7 @@ $body = elgg_view_entity_icon($image, 'small', array(
 	'img_class' => 'tidypics-photo',
 	'encode_text' => false,
 	'is_trusted' => true,
-	'link_class' => 'tidypics-lightbox elgg-lightbox',
+	'link_class' => 'tidypics-lightbox elgg-lightbox-photo',
 ));
 
 /*

@@ -44,7 +44,7 @@ function tidypics_init() {
 	$js = elgg_get_simplecache_url('js', 'photos/uploading');
 	elgg_register_simplecache_view('js/photos/uploading');
 	elgg_register_js('tidypics:uploading', $js, 'footer');
-
+	
 	elgg_register_js('swfobject', 'mod/tidypics/vendors/uploadify/swfobject.js', 'footer');
 	elgg_register_js('jquery.uploadify-tp', 'mod/tidypics/vendors/uploadify/jquery.uploadify.v2.1.1.min.js', 'footer');
 

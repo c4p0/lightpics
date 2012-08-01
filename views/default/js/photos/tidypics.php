@@ -9,12 +9,14 @@ elgg.provide('elgg.tidypics');
 
 elgg.tidypics.init = function() {
 
-	if ($.colorbox) {
-		$(".elgg-gallery .tidypics-lightbox").colorbox({
-			onComplete: function() {
-				$('#cboxLoadedContent .elgg-page-topbar, #cboxLoadedContent .elgg-page-header, ' +
-					'#cboxLoadedContent .elgg-page-footer, #cboxLoadedContent .elgg-sidebar').css('display', 'none');
-				$('#cboxLoadedContent .elgg-layout').css('background-image', 'none');
+	if (elgg.ui.lightbox) {
+		$('.elgg-lightbox, .elgg-lightbox-photo').colorbox({
+			href: function() {
+				var guid = (new RegExp("photos/image/[0-9]+", 'i')).exec($(this).attr('href')).toString().substr("photos/image/".length);
+				return elgg.config.wwwroot + "photos/thumbnail/" + guid + "/large";
+			},
+			title: function() {
+				return '<h3 style="display: inline">'+ $(this).find('img').attr('title') +'</h3> - <a href="'+ $(this).attr('href') +'">'+ elgg.echo('comments') +'</a>';
 			}
 		});
 	}

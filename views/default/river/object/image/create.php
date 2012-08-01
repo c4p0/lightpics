@@ -25,7 +25,7 @@ $image_link = elgg_view('output/url', array(
 	'href' => $image->getURL(),
 	'text' => $image->getTitle(),
 	'is_trusted' => true,
-	'class' => 'elgg-lightbox',
+	'class' => 'elgg-lightbox-photo',
 ));
 
 $album_link = elgg_view('output/url', array(
