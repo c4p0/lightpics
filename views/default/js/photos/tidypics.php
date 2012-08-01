@@ -9,8 +9,14 @@ elgg.provide('elgg.tidypics');
 
 elgg.tidypics.init = function() {
 
-	if ($(".tidypics-lightbox").length) {
-		$(".tidypics-lightbox").fancybox({'type': 'image'});
+	if ($.colorbox) {
+		$(".elgg-gallery .tidypics-lightbox").colorbox({
+			onComplete: function() {
+				$('#cboxLoadedContent .elgg-page-topbar, #cboxLoadedContent .elgg-page-header, ' +
+					'#cboxLoadedContent .elgg-page-footer, #cboxLoadedContent .elgg-sidebar').css('display', 'none');
+				$('#cboxLoadedContent .elgg-layout').css('background-image', 'none');
+			}
+		});
 	}
 
 	$("#tidypics-sort").sortable({

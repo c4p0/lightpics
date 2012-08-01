@@ -18,6 +18,7 @@
 }
 .elgg-module-tidypics-image {
 	margin: 5px auto;
+	height: 80%;
 }
 
 .tidypics-gallery-widget > li {

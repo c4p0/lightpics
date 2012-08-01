@@ -6,6 +6,10 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU General Public License v2
  */
 
+elgg_load_css('lightbox');
+elgg_load_js('lightbox');
+elgg_load_js('tidypics');
+
 $subject = $vars['item']->getSubjectEntity();
 $subject_link = elgg_view('output/url', array(
 	'href' => $subject->getURL(),
@@ -21,6 +25,7 @@ $image_link = elgg_view('output/url', array(
 	'href' => $image->getURL(),
 	'text' => $image->getTitle(),
 	'is_trusted' => true,
+	'class' => 'elgg-lightbox',
 ));
 
 $album_link = elgg_view('output/url', array(

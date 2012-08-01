@@ -13,4 +13,14 @@
 		<type>elgg_release</type>
 		<version>1.8</version>
 	</requires>
+	<suggests>
+		<type>plugin</type>
+		<name>colorbox</name>
+		<version>1.8</version>
+	</suggests>
+	<requires>
+		<type>priority</type>
+		<priority>after</priority>
+		<plugin>colorbox</plugin>
+	</requires>
 </plugin_manifest>

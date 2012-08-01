@@ -128,7 +128,7 @@ class TidypicsAlbum extends ElggObject {
 			'list_type' => 'gallery',
 			'list_type_toggle' => false,
 			'pagination' => true,
-			'gallery_class' => 'tidypics-gallery',
+			'gallery_class' => 'tidypics-gallery elgg-lightbox-gallery',
 		);
 
 		$options = array_merge($defaults, (array) $options);
