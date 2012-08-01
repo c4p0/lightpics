@@ -45,7 +45,6 @@ function tidypics_init() {
 	elgg_register_simplecache_view('js/photos/uploading');
 	elgg_register_js('tidypics:uploading', $js, 'footer');
 
-	elgg_register_js('tidypics:slideshow', 'mod/tidypics/vendors/PicLensLite/piclens_optimized.js', 'footer');
 	elgg_register_js('swfobject', 'mod/tidypics/vendors/uploadify/swfobject.js', 'footer');
 	elgg_register_js('jquery.uploadify-tp', 'mod/tidypics/vendors/uploadify/jquery.uploadify.v2.1.1.min.js', 'footer');
 
@@ -145,7 +144,6 @@ function tidypics_page_handler($page) {
 
 		case "album": // view an album individually
 			set_input('guid', $page[1]);
-			elgg_load_js('tidypics:slideshow');
 			require "$base/album/view.php";
 			break;
 
@@ -345,17 +343,6 @@ function tidypics_entity_menu_setup($hook, $type, $return, $params) {
 
 	// only show these options if there are images
 	if (elgg_instanceof($entity, 'object', 'album') && $entity->getSize() > 0) {
-		$url = $entity->getURL() . '?limit=50&view=rss';
-		$url = elgg_format_url($url);
-		$slideshow_link = "javascript:PicLensLite.start({maxScale:0, feedUrl:'$url'})";
-		$options = array(
-			'name' => 'slideshow',
-			'text' => elgg_echo('album:slideshow'),
-			'href' => $slideshow_link,
-			'priority' => 80,
-		);
-		$return[] = ElggMenuItem::factory($options);
-
 		if ($entity->canEdit()) {
 			$options = array(
 				'name' => 'sort',
