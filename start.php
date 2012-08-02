@@ -103,6 +103,8 @@ function tidypics_page_handler($page) {
 		return false;
 	}
 
+	elgg_load_js('lightbox');
+	elgg_load_css('lightbox');
 	elgg_load_js('tidypics');
 
 	$base = elgg_get_plugins_path() . 'lightpics/pages/photos';
