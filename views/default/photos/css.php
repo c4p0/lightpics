@@ -72,6 +72,68 @@
 	vertical-align: top;
 }
 
+/* ***************************************
+	UPLOADER
+*************************************** */
+
+.fileinput-container {
+	text-align: center;
+}
+.fileinput-button {
+	cursor: pointer;
+}
+.fileinput-button input {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	opacity: 0;
+	filter: alpha(opacity=0);
+
+}
+.files .fade {
+  display: none;
+}
+/* Fix for IE 6: */
+*html .fileinput-button {
+  margin-right: -2px;
+}
+*html .fileinput-button .elgg-button {
+  line-height: 24px;
+}
+*html .fileupload-buttonbar .elgg-button {
+  margin-left: 3px;
+}
+
+/* Fix for IE 7: */
+*+html .fileinput-button {
+  margin-right: 1px;
+}
+*+html .fileinput-button .elgg-button {
+  line-height: 24px;
+}
+*+html .fileupload-buttonbar .elgg-button {
+  margin-left: 3px;
+}
+
+@media (max-width: 480px) {
+  .files .preview * {
+    width: 40px;
+  }
+  .files .name * {
+    width: 80px;
+    display: inline-block;
+    word-wrap: break-word;
+  }
+}
+
+/* Fix for Webkit (Safari, Chrome) */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .fileinput-button {
+    margin-top: 2px;
+  }
+}
+
 <?php
 return true;
 ?>
