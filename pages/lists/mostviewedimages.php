@@ -50,14 +50,6 @@ $photos = tp_get_entities_from_annotations_calculate_x(
 */
 //error_log("custom query is " . (float)(microtime(true) - $start));
 
-// allow other plugins to override the slideshow
-$slideshow_link = trigger_plugin_hook('tp_slideshow', 'album', array(), null);
-if ($slideshow_link) {
-	add_submenu_item(elgg_echo('album:slideshow'),
-			$slideshow_link,
-			'photos' );
-}
-
 if ($owner_guid) {
 	if ($owner_guid == get_loggedin_userid()) {
 		$title = elgg_echo("tidypics:yourmostviewed");

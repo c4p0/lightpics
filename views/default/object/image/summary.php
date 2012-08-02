@@ -10,7 +10,6 @@
 
 $image = elgg_extract('entity', $vars);
 
-$img = elgg_view_entity_icon($image, 'small');
 
 $header = elgg_view('output/url', array(
 	'text' => $image->getTitle(),
@@ -19,11 +18,12 @@ $header = elgg_view('output/url', array(
 	'class' => 'tidypics-heading',
 ));
 
-$body = elgg_view('output/url', array(
-	'text' => $img,
+$body = elgg_view_entity_icon($image, 'small', array(
 	'href' => $image->getURL(),
+	'img_class' => 'tidypics-photo',
 	'encode_text' => false,
 	'is_trusted' => true,
+	'link_class' => 'tidypics-lightbox elgg-lightbox-photo',
 ));
 
 /*

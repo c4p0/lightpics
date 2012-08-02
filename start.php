@@ -39,8 +39,6 @@ function tidypics_init() {
 	elgg_register_simplecache_view('js/photos/tidypics');
 	elgg_register_js('tidypics', $js, 'footer');
 
-	elgg_register_js('tidypics:slideshow', 'mod/tidypics/vendors/PicLensLite/piclens_optimized.js', 'footer');
-	
 	// Add photos link to owner block/hover menus
 	elgg_register_plugin_hook_handler('register', 'menu:owner_block', 'tidypics_owner_block_menu');
 
@@ -129,7 +127,6 @@ function tidypics_page_handler($page) {
 
 		case "album": // view an album individually
 			set_input('guid', $page[1]);
-			elgg_load_js('tidypics:slideshow');
 			require "$base/album/view.php";
 			break;
 
@@ -307,21 +304,6 @@ function tidypics_entity_menu_setup($hook, $type, $return, $params) {
 			$return[] = ElggMenuItem::factory($options);
 		}
 	}
-
-	// only show slideshow link if there are images
-	if (elgg_instanceof($entity, 'object', 'album') && $entity->getSize() > 0) {
-		$url = $entity->getURL() . '?limit=50&view=rss';
-		$url = elgg_format_url($url);
-		$slideshow_link = "javascript:PicLensLite.start({maxScale:0, feedUrl:'$url'})";
-		$options = array(
-			'name' => 'slideshow',
-			'text' => elgg_echo('album:slideshow'),
-			'href' => $slideshow_link,
-			'priority' => 80,
-		);
-		$return[] = ElggMenuItem::factory($options);
-	}
-
 	return $return;
 }
 

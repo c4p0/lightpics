@@ -6,6 +6,10 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU General Public License v2
  */
 
+elgg_load_css('lightbox');
+elgg_load_js('lightbox');
+elgg_load_js('tidypics');
+
 $batch = $vars['item']->getObjectEntity();
 
 // Get images related to this batch
@@ -38,10 +42,12 @@ $subject_link = elgg_view('output/url', array(
 ));
 
 if (count($images)) {
-	$attachments = '<ul class="tidypics-river-list">';
+	$attachments = '<ul class="tidypics-river-list elgg-lightbox-gallery">';
 	foreach($images as $image) {
 		$attachments .= '<li class="tidypics-photo-item">';
-		$attachments .= elgg_view_entity_icon($image, 'tiny');
+		$attachments .= elgg_view_entity_icon($image, 'tiny', array(
+			'link_class' => 'tidypics-lightbox elgg-lightbox-photo',
+		));
 		$attachments .= '</li>';
 	}
 	$attachments .= '</ul>';
