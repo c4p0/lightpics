@@ -3,9 +3,11 @@
  *
  */
 
-$maxfilesize = (int) elgg_get_plugin_setting('maxfilesize', 'tidypics');
-$maxfilesize *= 1024;
-
+if ($maxfilesize = (int) elgg_get_plugin_setting('maxfilesize', 'lightpics')) {
+	$maxfilesize *= 1024 * 1024;
+} else {
+	$maxfilesize = 5 * 1024 * 1024;
+}
 ?>
 
 elgg.provide('elgg.tidypics.upload');
