@@ -13,7 +13,7 @@ $german = array(
 			'albums' => "Bilderalben",
 			'tidypics:disabled' => 'Deaktiviert',
 			'tidypics:enabled' => 'Aktiviert',
-			'admin:settings:photos' => 'Tidypics',
+			'admin:settings:photos' => 'Lightpics'
 
 			'photos:add' => "Album hinzufügen",
 			'images:upload' => "Bilder hochladen",
