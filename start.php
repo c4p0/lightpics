@@ -38,6 +38,9 @@ function tidypics_init() {
 	$js = elgg_get_simplecache_url('js', 'photos/tidypics');
 	elgg_register_simplecache_view('js/photos/tidypics');
 	elgg_register_js('tidypics', $js, 'footer');
+	$js = elgg_get_simplecache_url('js', 'photos/upload');
+	elgg_register_simplecache_view('js/photos/upload');
+	elgg_register_js('tidypics:upload', $js, 'footer');
 
 	$js_base = 'mod/lightpics/vendors/jquery-file-upload/js';
 	
