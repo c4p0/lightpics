@@ -45,7 +45,7 @@ $defaults = array(
 );
 
 foreach ($defaults as $name => $value) {
-	if (elgg_get_plugin_setting($name, 'tidypics') === null) {
-		elgg_set_plugin_setting($name, $value, 'tidypics');
+	if (elgg_get_plugin_setting($name, 'lightpics') === null) {
+		elgg_set_plugin_setting($name, $value, 'lightpics');
 	}
 }

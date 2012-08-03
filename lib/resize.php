@@ -17,7 +17,7 @@
 function tp_create_gd_thumbnails($file, $prefix, $filestorename) {
 	global $CONFIG;
 
-	$image_sizes = elgg_get_plugin_setting('image_sizes', 'tidypics');
+	$image_sizes = elgg_get_plugin_setting('image_sizes', 'lightpics');
 	if (!$image_sizes) {
 		// move this out of library
 		register_error(elgg_echo('tidypics:nosettings'));

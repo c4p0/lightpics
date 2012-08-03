@@ -5,7 +5,7 @@
  * @todo remove original image, group only upload not delete
  */
 
-$plugin = elgg_get_plugin_from_id('tidypics');
+$plugin = elgg_get_plugin_from_id('lightpics');
 
 $title = elgg_echo('tidypics:settings:main');
 $content = elgg_view('forms/photos/admin/settings/main', array('plugin' => $plugin));
