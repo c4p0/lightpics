@@ -19,7 +19,7 @@ if ($size == 'master') {
 	$contents = $image->getThumbnail($size);
 }
 if (!$contents) {
-	forward("mod/tidypics/graphics/image_error_$size");
+	forward("mod/lightpics/graphics/image_error_$size");
 }
 
 // expires every 14 days
