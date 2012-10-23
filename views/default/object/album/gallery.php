@@ -10,6 +10,7 @@
 
 $album = elgg_extract('entity', $vars);
 
+
 $album_cover = elgg_view_entity_icon($album, 'small');
 
 $header = elgg_view('output/url', array(
@@ -19,11 +20,14 @@ $header = elgg_view('output/url', array(
 	'class' => 'tidypics-heading',
 ));
 
-$footer = elgg_view('output/url', array(
-	'text' => $album->getContainerEntity()->name,
-	'href' => $album->getContainerEntity()->getURL(),
-	'is_trusted' => true,
-));
+$footer = "";
+if ($album->getContainerEntity()) {
+	$footer .= elgg_view('output/url', array(
+		'text' => $album->getContainerEntity()->name,
+		'href' => $album->getContainerEntity()->getURL(),
+		'is_trusted' => true,
+	));
+}
 $footer .= '<div class="elgg-subtext">' . elgg_echo('album:num', array($album->getSize())) . '</div>';
 
 $params = array(
