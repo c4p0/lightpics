@@ -327,10 +327,10 @@ padding:0 0 5px;
 /* ---------  tidypics river items ------------   */
 
 .river_object_image_create {
-	background: url(<?php echo $vars['url']; ?>mod/tidypics/graphics/icons/river_icon_image.gif) no-repeat left -1px;
+	background: url(<?php echo $vars['url']; ?>mod/lightpics/graphics/icons/river_icon_image.gif) no-repeat left -1px;
 }
 .river_object_album_create {
-	background: url(<?php echo $vars['url']; ?>mod/tidypics/graphics/icons/river_icon_album.gif) no-repeat left -1px;
+	background: url(<?php echo $vars['url']; ?>mod/lightpics/graphics/icons/river_icon_album.gif) no-repeat left -1px;
 }
 .river_object_image_comment {
 	background: url(<?php echo $vars['url']; ?>_graphics/river_icons/river_icon_comment.gif) no-repeat left -1px;
@@ -339,7 +339,7 @@ padding:0 0 5px;
 	background: url(<?php echo $vars['url']; ?>_graphics/river_icons/river_icon_comment.gif) no-repeat left -1px;
 }
 .river_user_tag {
-	background: url(<?php echo $vars['url']; ?>mod/tidypics/graphics/icons/river_icon_tag.gif) no-repeat left -1px;
+	background: url(<?php echo $vars['url']; ?>mod/lightpics/graphics/icons/river_icon_tag.gif) no-repeat left -1px;
 }
 
 /* ----------- tagging ---------------- */
@@ -410,7 +410,7 @@ overflow:hidden;
 
 .tidypics_tag {
 display:none;
-background:url(<?php echo $vars['url']; ?>mod/tidypics/graphics/spacer.gif); 
+background:url(<?php echo $vars['url']; ?>mod/lightpics/graphics/spacer.gif); 
 border:2px solid #ffffff; 
 overflow:hidden; 
 position:absolute; 
