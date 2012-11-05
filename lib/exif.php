@@ -24,7 +24,7 @@ function td_get_exif($image) {
 
 	$filename = $image->getFilenameOnFilestore();
 	$exif = exif_read_data($filename, 'IFD0,EXIF', true);
-	if (is_array($exif)) {
+	if (is_array($exif) && isset($exif['EXIF'])) {
 		$data = array_merge($exif['IFD0'], $exif['EXIF']);
 		foreach ($data as $key => $value) {
 			if (is_string($value)) {
