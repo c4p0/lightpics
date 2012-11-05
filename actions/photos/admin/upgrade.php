@@ -9,6 +9,7 @@ require_once "{$plugins_path}lightpics/version.php";
 
 $local_version = elgg_get_plugin_setting('version', 'tidypics');
 
+$local_version = 2009082901;
 if ($version <= $local_version) {
 	register_error('No upgrade required');
 	forward(REFERER);
@@ -17,6 +18,7 @@ if ($version <= $local_version) {
 set_time_limit(0);
 
 $base_dir = "{$plugins_path}lightpics/upgrades";
+
 
 // taken from engine/lib/version.php
 if ($handle = opendir($base_dir)) {
