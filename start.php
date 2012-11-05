@@ -120,6 +120,15 @@ function tidypics_page_handler($page) {
 	elgg_load_js('tidypics');
 
 	$base = elgg_get_plugins_path() . 'lightpics/pages/photos';
+
+	// sometimes owner comes as group:181872 which is not automatically handled
+	if (isset($page[1]) && strpos($page[1], 'group:') === 0) {
+		$parts = explode(':', $page[1]);
+		$owner_guid = $parts[1];
+		if ($owner_guid) {
+			elgg_set_page_owner_guid($owner_guid);
+		}
+	}
 	switch ($page[0]) {
 		case "all": // all site albums
 		case "world":
@@ -128,6 +137,9 @@ function tidypics_page_handler($page) {
 
 		case "owned":  // albums owned by container entity
 		case "owner":
+			if (!$owner) {
+				forward();
+			}
 			require "$base/owner.php";
 			break;
 
