@@ -43,14 +43,14 @@ function tidypics_init() {
 	elgg_register_js('tidypics:upload', $js, 'footer');
 
 	$js_base = 'mod/lightpics/vendors/jquery-file-upload/js';
-	
+
 	elgg_register_js('jquery-tmpl', "$js_base/vendor/tmpl.min.js", 'footer');
 	elgg_register_js('jquery-load-image', "$js_base/vendor/load-image.min.js", 'footer');
 	elgg_register_js('jquery-canvas-to-blob', "$js_base/vendor/canvas-to-blob.min.js", 'footer');
-	
+
 	elgg_register_js('jquery-fileupload', "$js_base/jquery.fileupload.js", 'footer');
 	elgg_register_js('jquery-fileupload-ui', "$js_base/jquery.fileupload-ui.js", 'footer');
-	
+
 	// Add photos link to owner block/hover menus
 	elgg_register_plugin_hook_handler('register', 'menu:owner_block', 'tidypics_owner_block_menu');
 
@@ -140,7 +140,7 @@ function tidypics_page_handler($page) {
                         if (!$page[1]) {
                                 forward(elgg_get_site_url() . 'photos/all');
                         }
- 
+
                         require "$base/owner.php";
                         break;
 
