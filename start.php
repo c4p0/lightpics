@@ -135,13 +135,14 @@ function tidypics_page_handler($page) {
 			require "$base/all.php";
 			break;
 
-		case "owned":  // albums owned by container entity
-		case "owner":
-			if (!$owner) {
-				forward();
-			}
-			require "$base/owner.php";
-			break;
+                case "owned":  // albums owned by container entity
+                case "owner":
+                        if (!$page[1]) {
+                                forward(elgg_get_site_url() . 'photos/all');
+                        }
+ 
+                        require "$base/owner.php";
+                        break;
 
 		case "friends": // albums of friends
 			require "$base/friends.php";
